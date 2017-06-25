@@ -1,0 +1,39 @@
+<div ng-include="'views/header_users.html'"></div>
+
+<div class="container">
+   
+    <center>
+          <h1 ng-show="tam == 0" class="alert alert-info">Aún no tienes compras</h1>	
+          <div class="container">
+          	 <h1 ng-show="tam > 0">Estas son tus compras</h1><br><br>
+
+          	    <div ng-repeat="info in shopp">  
+          	    	  <div style="background-color:rgb(248, 248, 248)">
+                              <div class="row">
+                                      <br>
+                              	   <div class="col-sm-6">
+                              	   	  <img ng-src="{{info.photo}}" width="150px"><br>
+          	    	 				<h4> <strong>Nombre del vehículo:</strong> {{info.vehicle_name}}<h4> <br>
+                               	   </div>
+
+                              	    <div class="col-sm-6">
+                              	      <br>
+                              	     <strong>Precio:</strong> {{info.price}}<br>
+				          	    	 <strong>Cantidad:</strong> {{info.quantity}}<br>
+				          	    	 <strong>Total pagado:</strong> {{info.total}}<br>
+				          	    	 <strong>Fecha de la compra:</strong> {{info.date_buy}}<br>
+				          	    	 <strong>Dueño del vehículo:</strong> {{info.email}}
+                              	    </div>
+                              </div>
+          	    	        <hr style="border: solid 2px #23BAC2">
+                      </div>
+          	    	
+          	     </div>
+          	    	  
+          	    	  
+          	    </div>
+          </div> 
+    </center>
+
+
+</div>

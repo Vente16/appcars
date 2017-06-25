@@ -1,0 +1,22 @@
+<div ng-include="'views/header_users.html'"></div>
+ <div class="container">
+ 	   <center>	
+ 	  <h1>Vehículos en venta</h1><br><br>
+ 	    <div class="row">
+ 	    	 <div ng-repeat="pro in productos" class="col-sm-4">
+
+ 	    	 	  <img ng-src="{{pro.photo}}"><br><br>
+ 	    	 	  <p></p>
+ 	    	 	  <h4>{{pro.vehicle_name}}</h4>
+ 	    	 	  <p><strong>Precio:</strong> {{pro.price}}</p>
+ 	    	 	  <p><strong>Usuario:</strong> {{pro.email}} <strong ng-show="pro.email == usertest">(Tú)</strong></p>
+ 	    	 	  <div ng-show="pro.email != usertest">
+ 	    	 	      <a href="#!infovehicle/{{pro.vehicle_id}}">Ver más información</a>
+ 	    	 	  </div>
+
+ 	    	 </div>  
+
+ 	    </div>
+
+ 	    </center>
+ </div>

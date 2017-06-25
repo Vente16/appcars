@@ -1,0 +1,28 @@
+<div ng-include="'views/header.html'"></div>
+
+ <center>
+	<div class="container">
+       
+       <h1 ng-show="res == 'true'">Completa el formulario y haz parte</h1>
+       <form ng-show="res == 'true'">
+       	   Nombre:
+       	   <input type="text" class="form-control" ng-model="user.name"><br>
+       	   Teléfono
+       	   <input type="text" class="form-control" ng-model="user.phone"><br>
+       	   Celular:
+       	   <input type="text" class="form-control" ng-model="user.cel"><br>
+       	    Correo
+       	    <input type="text" class="form-control" ng-model="user.email"><br>
+       	    Contraseña
+       	    <input type="password" class="form-control" ng-model="user.password"><br> 
+
+       	    <button class="btn btn-success" ng-click="register()">Registrarme</button>
+
+       </form>
+       
+         <div ng-show ="res == 'false'" class="jumbotron" width="100%"><h2>Registro exitoso, ya puedes acceder a la aplicación.</h2></div>
+
+
+	</div>
+
+</center>

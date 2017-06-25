@@ -1,0 +1,38 @@
+<div ng-include="'views/header_users.html'"></div>
+
+<center>
+   <div class="container">
+     <h2 ng-show="tam == 0" class="alert alert-info">Aún no has registrado ningún vehículo</h2>	
+   	 <h3 ng-show="tam > 0">A continuación tus vehículos registrados.</h3><br>
+   	   <button class="btn btn-info" ng-click="registerve()">Registrar vehículo</button><br><br>
+         
+         <div class="row">
+               
+              <div ng-repeat="info in myvehicles">
+	         	   <div style="background-color:rgb(248, 248, 248)">
+                    <div class="row">
+                        <br>
+                        <div class="col-sm-6">
+                            <img ng-src="{{info.photo}}" width="150px"><br>
+          	    	     	    <h4> <strong>Nombre del vehículo:</strong> {{info.vehicle_name}}<h4> <br>
+                       </div>
+
+                        <div class="col-sm-6">
+                            <br>
+                          <strong>Precio:</strong> {{info.price}}<br>
+			          	    	  <strong>Descripción</strong> {{info.description}}<br>
+			          	    	   <strong>Cantidad de ventas:</strong> {{info.sales}}<br><br>
+			          	    	 <button  class="btn btn-success" ng-click="updatevehicle(info.vehicle_id)">Actualizar información</button>&nbsp;&nbsp;
+                        <button class="btn btn-danger" ng-click="delete(info.vehicle_id)">Eliminar</button>
+                        </div>
+                    </div>
+                               
+                                
+          	    	        <hr style="border: solid 2px #23BAC2">
+                      </div>
+              </div>
+         </div>
+   </div>  
+ 
+
+</center>

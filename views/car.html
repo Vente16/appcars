@@ -1,0 +1,22 @@
+<div ng-include="'views/header_users.html'"></div>
+<div class="container">
+	 <center>
+       <h1>Producto a compar</h1><br><br>
+            <div class="row">
+                 <div class="col-sm-6">
+                   <img ng-src="{{carAll.photo}}" width="300px">
+	             <h3>{{carAll.vehicle_name}}</h3><br> 
+                 </div>
+
+                 <div class="col-sm-6">
+                 	<h3><strong>Precio: </strong> {{carAll.price}}</h3> 
+                 	<h3><strong>Cantidad: </strong>{{carAll.quantity}}</h3>
+                    <h3><strong>Total a pagar: </strong>{{carAll.totally}}</h3>
+                 </div>
+                
+           </div> 
+            <button class="btn btn-info" ng-click="save(carAll)">Confirmar compra</button>
+	        <button class="btn btn-danger" ng-click="cancel()">Cancelar</button>
+	 </center>
+
+</div>

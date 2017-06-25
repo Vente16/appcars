@@ -1,0 +1,18 @@
+<div ng-include="'views/header_users.html'"></div>
+
+<center>
+
+   <div class="contaner">
+    <h3>Completa el formulario</h3>
+    <form>
+    	<p>Nombre del vehículo</p><input type="text" ng-model="vehicle.name" class="form-control"><br><br>
+    	precio: <input type="text" ng-model="vehicle.price"  class="form-control" ><br><br>
+    	descripción:<br> <textarea cols="30" rows="5" ng-model="vehicle.description"  class="form-control"></textarea>
+        <input type="file" class="form-control" file-model="myFile"/><br>
+        <button ng-click="uploadFile()" class="btn btn-success">Registrar</button>
+
+    </form> 
+      
+    </div>
+
+</center>

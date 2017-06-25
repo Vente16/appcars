@@ -1,0 +1,15 @@
+<div ng-include="'views/header.html'"></div>
+
+<div class="container">
+	  
+   <center>
+		 <form>
+		      Correo: <input type="text" class="login" ng-model="user.email"><br>
+		 	  Contraseña: <input type="password" class="login" ng-model="user.pass"><br>
+		 	  <button class="btn btn-primary" ng-click="login()">Iniciar sesión</button><br><br>
+		 	  <div class="alert alert-danger" ng-show="invalid == 'true'">Contraseña o correo inválido.</div>
+
+		 </form>
+   </center> 
+
+</div>

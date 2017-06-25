@@ -1,0 +1,20 @@
+<div ng-include="'views/header_users.html'"></div>
+
+<center>
+
+   <div class="contaner">
+    <form ng-repeat="vehicle in info">
+         <img ng-src="{{vehicle.photo}}" alt="">
+          <h3>Actualizar datos del vehículo</h3>
+    	<p>Nombre del vehículo</p><input type="text" id="name" ng-model="vehicle.vehicle_name" class="form-control"><br>
+    	precio: <input type="text" ng-model="vehicle.price" id="price" class="form-control" ><br>
+    	descripción:<br> <textarea cols="30" id="description" rows="5" ng-model="vehicle.description"  class="form-control"></textarea><br>
+        Foto <strong>(Sí desea conservar la misma imagen no selecione archivo)</strong> <input type="file" class="form-control" upload-image="archive"/><br>
+        <button ng-click="updateVehicle()" class="btn btn-primary">Actualizar</button>
+
+    </form> 
+      
+    </div>
+    <br><br>
+
+</center>

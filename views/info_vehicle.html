@@ -1,0 +1,38 @@
+<div ng-include="'views/header_users.html'"></div>
+
+<div class="container">
+      <br>
+     <center> 
+         <div>
+          <div ng-repeat="vehicle in info">
+            <div class="row">
+              <div class="col-sm-5">
+          	  <img ng-src="{{vehicle.photo}}" width="300px">
+          	   <h3>{{vehicle.vehicle_name}}</h3>
+          	      </div>
+		     
+	          	       <div class="col-sm-5">
+
+		      	     	<p><strong>Precio:</strong> {{vehicle.price}}<br></p>
+                        <p><strong>Descripción: </strong>{{vehicle.description}}</p>
+		      	            <hr style="border: solid 2px">
+	          	     	  <h4>Información del contacto</h4>
+		               	   <h5><strong>Nombre: </strong>{{vehicle.user_name}}<br><h5>
+		               	   <h5><strong>Teléfono: </strong>{{vehicle.phone}}<br></h5>
+		               	   <h5><strong>Celular: </strong>{{vehicle.cel}}<br></h5><br>
+	          	     </div>
+      
+          	   </div>
+          	   <strong>Cantidad: </strong><br><button class="btn btn-danger" ng-click="less()">-</button><input type="text" ng-model="cant" style="width: 100px"><button class="btn btn-success"  ng-click="more()">+</button><br><br>
+                
+          	  
+               <div class="container">
+               	     <button class="btn btn-primary" ng-click="buy(vehicle)">Comprar</button><br><br>
+               	     <p class="alert alert-danger" ng-show="notbuy == 'true'"><strong>La cantidad miníma debe ser 1.</strong></p>
+               </div>
+          </div>
+        
+         </div>
+     </center>	 
+
+</div>
